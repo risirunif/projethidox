@@ -7,7 +7,7 @@ build:
             apt-get update
             apt-get install git -y
             apt-get install wget -y
- clone_script:
+    - script:
 - sh: >-
     #!/bin/bash
 
